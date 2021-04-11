@@ -1,13 +1,13 @@
 [tool.poetry]
 name = 'Flask-Mistune'
-version = '0.5.1'
+version = '0.5.2'
 description = 'A interface between the Flask web framework and the Mistune Markdown parser.'
 authors = ["Jesse Spangenberger <flamusdiu@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
-Flask = "~=1.0.0"
+Flask = ">=1.0"
 mistune = ">=2.0.0rc1"
 
 [tool.poetry.dev-dependencies]

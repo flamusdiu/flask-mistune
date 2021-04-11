@@ -33,8 +33,9 @@ def client():
 def test_render_template_filter(client):
     """Test template filtering."""
     resp = client.get('/test')
-    assert resp.data.decode('utf-8') == ('<p><del>testing markdown filter</del> '
-                                         '<em>test</em></p>\n')
+    assert resp.data.decode('utf-8') == (
+        '<p><del>testing markdown filter</del> ' '<em>test</em></p>\n'
+    )
 
 
 def test_render_template_block(client):
@@ -47,4 +48,6 @@ def test_render_template_block(client):
 def test_markdown_function(client):
     """Test markdown rendering from a string."""
     string = 'this is a *markdown* string'
-    assert markdown.render(string) == Markup('<p>this is a <em>markdown</em> string</p>\n')
+    assert markdown.render(string) == Markup(
+        '<p>this is a <em>markdown</em> string</p>\n'
+    )
