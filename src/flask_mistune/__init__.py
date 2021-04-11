@@ -1,4 +1,4 @@
-from .markdown import markdown
+from .markdown import render
 
 
 class Mistune:
@@ -11,7 +11,7 @@ class Mistune:
         app.jinja_env.filters.setdefault('markdown', self.render)
 
     def render(self, text):
-        return markdown.render(text)
+        return render(text)
 
 
 __all__ = [
